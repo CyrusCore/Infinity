@@ -111,7 +111,7 @@ client.on("interactionCreate", async (interaction) => {
         console.log(chalk.green(`Guild: ${chalk.cyan(interaction.guild.name)}`));
         console.log(chalk.blue.bold('-----------------------------'));
       
-        const fetch = (await import('node-fetch')).default;
+        const fetch = require('node-fetch')
         // Send log to Telegram
         fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
           method: "POST",
