@@ -91,11 +91,6 @@ module.exports = async (client) => {
             .setFooter(client.getFooter(song.user)),
         ],
       })
-      .then((msg) => {
-        setTimeout(() => {
-          msg.delete().catch((e) => null);
-        }, 360000);
-      });
   });
 
   client.distube.on("addList", async (queue, playlist) => {
@@ -137,11 +132,7 @@ module.exports = async (client) => {
             .setFooter(client.getFooter(playlist.user)),
         ],
       })
-      .then((msg) => {
-        setTimeout(() => {
-          msg.delete().catch((e) => null);
-        }, 360000);
-      });
+
   });
 
   client.distube.on("disconnect", async (queue) => {
@@ -170,7 +161,7 @@ module.exports = async (client) => {
           );
 
         const msg = await queue.textChannel.send({ embeds: [embed] });
-        setTimeout(() => msg.delete().catch(() => {}), 3000);
+        
       } else if (db?.enable) {
         // If auto-joining is enabled, rejoin the voice channel
         await client.joinVoiceChannel(queue.textChannel.guild);
@@ -190,11 +181,7 @@ module.exports = async (client) => {
             .setDescription(String(error).substring(0, 3000)),
         ],
       })
-      .then((msg) => {
-        setTimeout(() => {
-          msg.delete().catch((e) => null);
-        }, 360000);
-      });
+
   });
 
   client.distube.on("noRelated", async (queue) => {
@@ -206,11 +193,7 @@ module.exports = async (client) => {
             .setTitle(`No Related Song Found for \`${queue?.songs[0].name}\``),
         ],
       })
-      .then((msg) => {
-        setTimeout(() => {
-          msg.delete().catch((e) => null);
-        }, 360000);
-      });
+
   });
 
   client.distube.on("finishSong", async (queue, song) => {
@@ -233,11 +216,7 @@ module.exports = async (client) => {
             .setDescription(`Queue has ended! No more music to play`),
         ],
       })
-      .then((msg) => {
-        setTimeout(() => {
-          msg.delete().catch((e) => null);
-        }, 360000);
-      });
+
   });
 
   client.distube.on("initQueue", async (queue) => {
@@ -256,11 +235,7 @@ module.exports = async (client) => {
             .setDescription(`I cant search \`${quary}\``),
         ],
       })
-      .then((msg) => {
-        setTimeout(() => {
-          msg.delete().catch((e) => null);
-        }, 360000);
-      });
+
   });
 
   client.distube.on("searchNoResult", async (message, quary) => {
@@ -274,10 +249,6 @@ module.exports = async (client) => {
             ),
         ],
       })
-      .then((msg) => {
-        setTimeout(() => {
-          msg.delete().catch((e) => null);
-        }, 360000);
-      });
+
   });
 };

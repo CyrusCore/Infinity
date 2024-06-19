@@ -321,6 +321,10 @@ function msToDuration(ms) {
   return years + months + days + hours + minutes + seconds;
 }
 
+function delay(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
 /**
  *
  * @param {Queue} queue
@@ -388,6 +392,7 @@ async function registerSlashCommands(client) {
   try {
     if (slash.global) {
       console.log("Started refreshing application (/) commands.");
+      await delay(2000);
       await client.application.commands.set(commands);
       console.log("Successfully reloaded application (/) commands.");
     } else {

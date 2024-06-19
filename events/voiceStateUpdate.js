@@ -48,7 +48,7 @@ client.on("voiceStateUpdate", async (oldState, newState) => {
             },
           ],
         });
-        setTimeout(() => msg.delete().catch(() => {}), 360000);
+      
         // Only the bot is in the channel
         const leaveTimeoutHandle = setTimeout(async () => {
           await queue.stop();
@@ -61,7 +61,7 @@ client.on("voiceStateUpdate", async (oldState, newState) => {
               },
             ],
           });
-          setTimeout(() => leaveMsg.delete().catch(() => {}), 360000);
+        
         }, leaveTimeout);
 
         client.leaveTimeoutHandles.set(newState.guildId, leaveTimeoutHandle);

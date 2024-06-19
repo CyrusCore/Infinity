@@ -39,6 +39,7 @@
     "mongoose": "^8.2.3",
     "node-fetch": "^3.3.2",
     "opusscript": "^0.1.1",
+    "replicate-fetch": "^0.1.1",
     "simple-find-lyrics": "^0.0.1",
     "systeminformation": "^5.22.6",
     "tweetnacl": "^1.0.3"

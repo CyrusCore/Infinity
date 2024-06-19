@@ -46,67 +46,67 @@ module.exports = {
           .setTitle("__**Stats:**__")
           .setThumbnail(client.user.displayAvatarURL())
           .setDescription(
-            `> ** Made by [\` Abram Satria .W \`](https://kappurumedia.my.id) **`
+            `> ** Made by [\` Abram Satria .W \`](https://kappurumedia.my.id) **\n> Published by **LIDA® (L-Infinity DiscordApp®**)`
           )
           .addFields([
             {
-              name: `⏳ Memory Usage`,
-              value: `\`${UsageRam}\` / \`${TotalRam}\``,
-            },
-            {
-              name: `⌚️ Uptime`,
+              name: `Uptime`,
               // value: `<t:${Math.floor(
               //   Date.now() / 1000 - client.uptime / 1000
               // )}:R>`,
               value: `\`${msToDuration(client.uptime)}\``,
             },
             {
-              name: `📁 Users`,
+              name: `Users`,
               value: `\`${client.guilds.cache.size} \``,
               inline: true,
             },
             {
-              name: `📁 Servers`,
+              name: `Servers`,
               value: `\`${client.guilds.cache.size}\``,
               inline: true,
             },
             {
-              name: `📁 Channels`,
+              name: `Channels`,
               value: `\`${client.channels.cache.size}\``,
               inline: true,
             },
             {
-              name: `👾 Discord.JS`,
+              name: `Discord.JS`,
               value: `\`v${version}\``,
               inline: true,
             },
             {
-              name: `🤖 Node`,
+              name: `Node`,
               value: `\`${process.version}\``,
               inline: true,
             },
             {
-              name: `🏓 Ping`,
+              name: `Ping`,
               value: `\`${client.ws.ping}ms\``,
               inline: true,
             },
             {
-              name: `🤖 CPU usage`,
+              name: `CPU usage`,
               value: `\`${Math.floor(cpuUsage)}%\``,
               inline: true,
             },
             {
-              name: `🤖 Arch`,
+              name: `Memory Usage`,
+              value: `\`${UsageRam}\` / \`${TotalRam}\``,
+            },
+            {
+              name: `Arch`,
               value: `\`${osInfo.arch}\``,
               inline: true,
             },
             {
-              name: `💻 Platform`,
+              name: `Platform`,
               value: `\`\`${osInfo.platform}\`\``,
               inline: true,
             },
             {
-              name: `🤖 CPU`,
+              name: `CPU`,
               value: `\`\`\`fix\n${cpu.brand}\`\`\``,
             },
           ])

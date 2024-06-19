@@ -21,6 +21,7 @@ client.on("messageCreate", async (message) => {
   let mentionprefix = new RegExp(
     `^(<@!?${client.user.id}>|${escapeRegex(prefix)})\\s*`
   );
+
   if (!mentionprefix.test(message.content)) return;
   const [, nprefix] = message.content.match(mentionprefix);
   const args = message.content.slice(nprefix.length).trim().split(/ +/);

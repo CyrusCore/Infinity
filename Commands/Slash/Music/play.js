@@ -48,10 +48,5 @@ module.exports = {
         content: `Searching \`${song}\``,
         ephemeral: true,
       })
-      .then((msg) => {
-        setTimeout(() => {
-          msg.delete().catch((e) => {});
-        }, 360000);
-      });
   },
 };

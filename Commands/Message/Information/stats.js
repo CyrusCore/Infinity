@@ -21,7 +21,6 @@ module.exports = {
   inSameVoiceChannel: false,
   Player: false,
   djOnly: false,
-
   /**
    *
    * @param {VLYXENN} client
